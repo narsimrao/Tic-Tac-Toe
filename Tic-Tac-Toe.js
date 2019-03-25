@@ -35,7 +35,7 @@ function alert_winner(){
   {
     alert('X wins')
   }
-  if(box[0].textContent === 'X' && box[4].textContent === 'X' && box[7].textContent === 'X')
+  if(box[0].textContent === 'X' && box[4].textContent === 'X' && box[8].textContent === 'X')
   {
     alert('X wins')
   }
@@ -70,7 +70,7 @@ function alert_winner(){
   {
     alert('O wins')
   }
-  if(box[0].textContent === 'O' && box[4].textContent === 'O' && box[7].textContent === 'O')
+  if(box[0].textContent === 'O' && box[4].textContent === 'O' && box[8].textContent === 'O')
   {
     alert('O wins')
   }
@@ -100,16 +100,14 @@ function game_play(){
     if(inc%2 == 0)
    {
      this.textContent = 'O';
-     setInterval(500);
-     alert_winner();
    }
    else {
      this.textContent = 'X';
-     setInterval(500);
-     alert_winner();
    }
    inc++;
+   alert_winner();
   }
+
 
 }
 
