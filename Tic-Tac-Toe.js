@@ -21,6 +21,77 @@ function restart_the_game(){
   }
 }
 
+function alert_winner(){
+  // x winning combination
+  if(box[0].textContent === 'X' && box[1].textContent === 'X' && box[2].textContent === 'X')
+  {
+    alert('X wins')
+  }
+  if(box[3].textContent === 'X' && box[4].textContent === 'X' && box[5].textContent === 'X')
+  {
+    alert('X wins')
+  }
+  if(box[6].textContent === 'X' && box[7].textContent === 'X' && box[8].textContent === 'X')
+  {
+    alert('X wins')
+  }
+  if(box[0].textContent === 'X' && box[4].textContent === 'X' && box[7].textContent === 'X')
+  {
+    alert('X wins')
+  }
+  if(box[2].textContent === 'X' && box[4].textContent === 'X' && box[6].textContent === 'X')
+  {
+    alert('X wins')
+  }
+  if(box[0].textContent === 'X' && box[3].textContent === 'X' && box[6].textContent === 'X')
+  {
+    alert('X wins')
+  }
+  if(box[2].textContent === 'X' && box[5].textContent === 'X' && box[8].textContent === 'X')
+  {
+    alert('X wins')
+  }
+  if(box[1].textContent === 'X' && box[4].textContent === 'X' && box[7].textContent === 'X')
+  {
+    alert('X wins')
+  }
+
+
+  // O winning combination
+  if(box[0].textContent === 'O' && box[1].textContent === 'O' && box[2].textContent === 'O')
+  {
+    alert('O wins')
+  }
+  if(box[3].textContent === 'O' && box[4].textContent === 'O' && box[5].textContent === 'O')
+  {
+    alert('O wins')
+  }
+  if(box[6].textContent === 'O' && box[7].textContent === 'O' && box[8].textContent === 'O')
+  {
+    alert('O wins')
+  }
+  if(box[0].textContent === 'O' && box[4].textContent === 'O' && box[7].textContent === 'O')
+  {
+    alert('O wins')
+  }
+  if(box[2].textContent === 'O' && box[4].textContent === 'O' && box[6].textContent === 'O')
+  {
+    alert('O wins')
+  }
+  if(box[0].textContent === 'O' && box[3].textContent === 'O' && box[6].textContent === 'O')
+  {
+    alert('O wins')
+  }
+  if(box[2].textContent === 'O' && box[5].textContent === 'O' && box[8].textContent === 'O')
+  {
+    alert('O wins')
+  }
+  if(box[1].textContent === 'O' && box[4].textContent === 'O' && box[7].textContent === 'O')
+  {
+    alert('O wins')
+  }
+}
+
 //change between x and o
 function game_play(){
 
@@ -29,9 +100,13 @@ function game_play(){
     if(inc%2 == 0)
    {
      this.textContent = 'O';
+     setInterval(500);
+     alert_winner();
    }
    else {
      this.textContent = 'X';
+     setInterval(500);
+     alert_winner();
    }
    inc++;
   }
